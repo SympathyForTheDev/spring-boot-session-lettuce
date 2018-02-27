@@ -25,22 +25,15 @@ $ ./gradlew clean bootRun
 - Logout at http://localhost:2222/logout
 
 === Dependency 
-
+```
 +-----------+        +-----------+        +-----------+        +-----------+
-
 |           |        |           |        |           |        |           |
-
 | Spring    |        |  Spring   |        |  Spring   |        |           |
-
 | Session   +------->+  Session  +------->+  Data     +------->+  Lettuce  |
-
 | Core      |        |  Redis    |        |  Redis    |        |           |
-
 |           |        |           |        |           |        |           |
-
 +-----------+        +-----------+        +-----------+        +-----------+
-
-
+```
 1/ spring-session-core: provide the httpSession support 
 
 2/ spring-session-redis: annotation @EnableRedisHttpSession and spring autoconfiguration
@@ -48,6 +41,7 @@ $ ./gradlew clean bootRun
 3/ spring-data-redis: repository layer 
 
 4/ lettuce: redis client 
+
 
 === Limitations 
 
